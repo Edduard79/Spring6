@@ -1,18 +1,21 @@
 package devhope.demo;
 
-import lombok.Getter;
 import org.springframework.stereotype.Component;
 
 @Component
-@Getter
-public class MyComponent {
-    private final String myComponentName;
+public class MyComponent{
 
-    public MyComponent() {
-        this.myComponentName = "Paolo";
+    private String myComponentName;
+
+    public  MyComponent(){
+        this.myComponentName = "Paolino";
+
+        System.out.println("MyComponent constructor has been called");
     }
 
     public String getMyComponentName(){
+        System.out.println("MyComponent.getMyComponentName()");
         return myComponentName;
     }
+
 }
